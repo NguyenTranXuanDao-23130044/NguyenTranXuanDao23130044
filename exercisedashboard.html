@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Dashboard</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        select, input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .exercise-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .exercise-container h3 {
+            margin-top: 0;
+        }
+        .status {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .completed {
+            color: green;
+        }
+        .in-progress {
+            color: orange;
+        }
+        .not-started {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Exercise Dashboard</h2>
+
+    <!-- Filter and Search -->
+    <div class="filter-container">
+        <label for="language">Filter by Language:</label>
+        <select id="language" onchange="filterExercises()">
+            <option value="all">All</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+        </select>
+
+        <label for="search">Search by keyword:</label>
+        <input type="text" id="search" placeholder="Search exercises..." onkeyup="filterExercises()">
+    </div>
+
+    <!-- Exercise List -->
+    <div id="exercise-list">
+        <div class="exercise-container" data-language="C" data-status="completed">
+            <h3>Exercise 1: C Basics</h3>
+            <p><strong>Description:</strong> Write a program to print "Hello, World!" in C.</p>
+            <p><strong>Difficulty:</strong> Easy</p>
+            <p class="status completed">Completed</p>
+        </div>
+
+        <div class="exercise-container" data-language="Python" data-status="in-progress">
+            <h3>Exercise 2: Python Functions</h3>
+            <p><strong>Description:</strong> Write a Python function that returns the square of a number.</p>
+            <p><strong>Difficulty:</strong> Medium</p>
+            <p class="status in-progress">In Progress</p>
+        </div>
+
+        <div class="exercise-container" data-language="Java" data-status="not-started">
+            <h3>Exercise 3: Java Classes</h3>
+            <p><strong>Description:</strong> Implement a Java class with constructors and methods.</p>
+            <p><strong>Difficulty:</strong> Hard</p>
+            <p class="status not-started">Not Started</p>
+        </div>
+    </div>
+
+    <script>
+        function filterExercises() {
+            // Get the filter values
+            const languageFilter = document.getElementById('language').value.toLowerCase();
+            const searchKeyword = document.getElementById('search').value.toLowerCase();
+
+            // Get the list of exercises
+            const exercises = document.querySelectorAll('.exercise-container');
+
+            exercises.forEach(exercise => {
+                const language = exercise.getAttribute('data-language').toLowerCase();
+                const status = exercise.getAttribute('data-status');
+                const title = exercise.querySelector('h3').innerText.toLowerCase();
+
+                // Check if exercise matches the filter criteria
+                const matchesLanguage = (languageFilter === 'all' || language === languageFilter);
+                const matchesSearch = (title.includes(searchKeyword));
+
+                // Show or hide the exercise based on filters
+                if (matchesLanguage && matchesSearch) {
+                    exercise.style.display = '';
+                } else {
+                    exercise.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
