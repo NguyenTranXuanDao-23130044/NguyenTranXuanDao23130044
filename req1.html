@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .navbar a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            color: #0073e6;
+        }
+
+        /* Center container */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Welcome section */
+        .welcome-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .welcome-section h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .welcome-section .profile-info span {
+            font-size: 14px;
+            color: #0073e6;
+            cursor: pointer;
+        }
+
+        /* Streak section */
+        .streak-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .streak-section .streak-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .streak-section .progress {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 30px;
+        }
+
+        .progress .progress-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0073e6;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* Course list */
+        .course-list {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-list h3 {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .tabs a {
+            margin-right: 20px;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tabs a.active {
+            border-bottom: 2px solid #000;
+            color: #000;
+        }
+
+        .course {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .course:last-child {
+            border-bottom: none;
+        }
+
+        .course-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .course-info img {
+            width: 80px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .course-info .course-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .course-action {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .see-all {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .see-all a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="menu">
+            <a href="#">Business Operations</a>
+            <a href="#">Cloud Computing</a>
+            <a href="#">Cybersecurity</a>
+            <a href="#">Data Science</a>
+            <a href="#">Development</a>
+            <a href="#">IT Operations</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Welcome section -->
+        <div class="welcome-section">
+            <div class="profile-info">
+                <h2>Welcome back, Nguyen Tran Xuan Dao</h2>
+                <span>Add occupation and interests</span>
+            </div>
+        </div>
+
+        <!-- Streak section -->
+        <div class="streak-section">
+            <div class="streak-info">
+                <div class="progress-circle">2</div>
+                <p>Weeks<br>Current streak</p>
+            </div>
+            <div class="progress">
+                <div class="progress-circle">11/30</div>
+                <p>Course min<br>4/1 visit</p>
+            </div>
+        </div>
+
+        <!-- Course list -->
+        <div class="course-list">
+            <h3>Pick up where you left off</h3>
+            <div class="tabs">
+                <a href="#" class="active">Courses</a>
+                <a href="#">Learning paths</a>
+                <a href="#">Certification preparation</a>
+            </div>
+
+            <div class="course">
+                <div class="course-info">
+                    <img src="https://via.placeholder.com/80x50" alt="Course 1">
+                    <div class="course-title">FPT_ISMS Refresh S2 2024</div>
+                </div>
+                <a href="#" class="course-action">Continue</a>
+            </div>
+            <div class="course">
+                <div class="course-info">
+                    <img src="https://via.placeholder.com/80x50" alt="Course 2">
+                    <div class="course-title">MuleSoft 4.X Complete Guide</div>
+                </div>
+                <a href="#" class="course-action">Continue</a>
+            </div>
+            <div class="course">
+                <div class="course-info">
+                    <img src="https://via.placeholder.com/80x50" alt="Course 3">
+                    <div class="course-title">English Vocabulary: 504 Essential Words</div>
+                </div>
+                <a href="#" class="course-action">Continue</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

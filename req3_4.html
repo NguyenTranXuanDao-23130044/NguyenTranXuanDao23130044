@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            font-size: 14px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .section-header {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f7ff;
+            overflow-y: auto;
+        }
+
+        .video-container {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            position: relative;
+        }
+
+        .video-container .play-button {
+            color: white;
+            font-size: 60px;
+            cursor: pointer;
+        }
+
+        .course-info {
+            padding: 15px 0;
+        }
+
+        .course-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .course-info p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .course-info .ratings {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Tabs below the video */
+        .tabs {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: #333;
+        }
+
+        .tabs a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Main content with video and course info -->
+    <div class="main-content">
+        <!-- Video Player Placeholder -->
+        <div class="video-container">
+            <div class="play-button">&#9658;</div>
+        </div>
+
+        <!-- Course Information -->
+        <div class="course-info">
+            <h1>Upgraded with latest MuleSoft ESB versions</h1>
+            <p>Anypoint Platform, DataWeave, MUnit, DevOps, MCD Tests and Realtime Project</p>
+            <div class="ratings">
+                <span>4.6 ★ | 26,379 Students | 50.5 hours total</span><br>
+                <span>Last updated: November 2023</span>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <a href="#">Overview</a>
+            <a href="#">Q&A</a>
+            <a href="#">Notes</a>
+            <a href="#">Announcements</a>
+            <a href="#">Reviews</a>
+            <a href="#">Learning Tools</a>
+        </div>
+    </div>
+
+    <!-- Sidebar for course content -->
+    <div class="sidebar">
+        <h2>Course content</h2>
+        <ul>
+            <li>2. Integration introduction <span>8min</span></li>
+            <li>3. Mule API development life cycle <span>4min</span></li>
+            <li>4. Course resources <span>1min</span></li>
+            <div class="section-header">Section 2: Mule 4 installation setup</div>
+            <li>Lesson 1: Mule installation <span>21min</span></li>
+            <div class="section-header">Section 3: Mule basics</div>
+            <li>Lesson 1: Develop first mule app <span>42min</span></li>
+            <li>Lesson 2: Mule events and structure <span>1hr 17min</span></li>
+            <div class="section-header">Section 4: Mule error handling</div>
+            <li>Lesson 1: Error handling concepts <span>2hr 22min</span></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <!-- Main content -->
+    <div class="main-content">
+        <h1>Upgraded with latest MuleSoft ESB versions</h1>
+        <p>Anypoint Platform, DataWeave, MUnit, DevOps, MCD Tests and Realtime Project</p>
+        <div class="ratings">
+            <span>4.6 ★ | 26,379 Students | 50.5 hours total</span><br>
+            <span>Last updated: November 2023</span>
+        </div>
+
+        <!-- What you'll learn section -->
+        <div class="learn-section">
+            <h2>What you'll learn</h2>
+            <ul>
+                <li>Become an expert in Mule ESB, Anypoint platform operations, MUnit, and DevOps.</li>
+                <li>Step-by-step coding in detailed explanation.</li>
+                <li>Setup MuleSoft for your organization.</li>
+                <li>Develop, design, manage projects.</li>
+                <li>Guaranteed certifications for Mule Level 1, Level 2, and Integration Associate.</li>
+                <li>Learn Mule 4.x including all SDLC phases.</li>
+                <li>Real-time hands-on experience.</li>
+                <li>One course destination for all real-time project actions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar content -->
+    <div class="sidebar">
+        <h2>Course content</h2>
+        <ul>
+            <li>Section 7: DataWeave language - basics <span>1hr 11min</span></li>
+            <li>Section 8: Mule database module <span>1hr 15min</span></li>
+            <li>Section 9: Mule validation module <span>57min</span></li>
+            <li>Section 10: Mule error handling <span>2hr 22min</span></li>
+            <li>Section 11: Anypoint platform introduction <span>19min</span></li>
+            <li>Section 12: Anypoint platform - Design API using RAML <span>1hr</span></li>
+            <li>Section 13: Design Fragments based API's <span>57min</span></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

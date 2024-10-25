@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Certifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .certifications-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .certification-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .certification-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .certification-card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .certification-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .certification-card .rating {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .certification-card .rating span {
+            color: #ffa500;
+        }
+
+        .certification-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Personalize section */
+        .personalize-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+        }
+
+        .personalize-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .personalize-section p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .personalize-section button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .personalize-section button:hover {
+            background-color: #e68a00;
+        }
+
+        .edit-link {
+            font-size: 14px;
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .edit-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .certifications-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .certification-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="section-title">Based on your certification interests, we recommend</div>
+    <a href="#" class="edit-link">Edit certification interests</a>
+
+    <!-- Certifications section -->
+    <div class="certifications-container">
+        <!-- Certification Card 1 -->
+        <div class="certification-card">
+            <img src="https://via.placeholder.com/250x150" alt="Oracle Java Certification">
+            <h3>Oracle Certified Associate Java Programmer (OCAJP) 1Z0-808</h3>
+            <p>Andrii Piatakha, Learn IT University</p>
+            <div class="rating">
+                <span>★ 4.6</span> (438 reviews)
+            </div>
+        </div>
+
+        <!-- Certification Card 2 -->
+        <div class="certification-card">
+            <img src="https://via.placeholder.com/250x150" alt="Oracle Java Certification">
+            <h3>Oracle Java Certification - Pass the Associate 1Z0-808 Exam.</h3>
+            <p>Tim Buchalka's Learn Programming Academy</p>
+            <div class="rating">
+                <span>★ 4.6</span> (5,906 reviews)
+            </div>
+        </div>
+
+        <!-- Certification Card 3 -->
+        <div class="certification-card">
+            <img src="https://via.placeholder.com/250x150" alt="Java Developer Bootcamp">
+            <h3>Complete Java SE 8 Developer Bootcamp - OCA Prep Included</h3>
+            <p>Intertech Training, Jeff Jensen</p>
+            <div class="rating">
+                <span>★ 4.6</span> (9,726 reviews)
+            </div>
+        </div>
+
+        <!-- Certification Card 4 -->
+        <div class="certification-card">
+            <img src="https://via.placeholder.com/250x150" alt="Spring Certification">
+            <h3>Spring Professional Certification Exam Tutorial - Module 02</h3>
+            <p>Dominik Cebula</p>
+            <div class="rating">
+                <span>★ 4.6</span> (1,121 reviews)
+            </div>
+        </div>
+    </div>
+
+    <!-- Personalize Section -->
+    <div class="personalize-section">
+        <h2>Personalize your learning experience</h2>
+        <p>Add your occupation and interests to get better content recommendations.</p>
+        <button>Add occupation and interests</button>
+    </div>
+</div>
+
+</body>
+</html>
