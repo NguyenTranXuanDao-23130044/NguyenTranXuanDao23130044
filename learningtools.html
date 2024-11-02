@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+        }
+        .header span {
+            font-size: 14px;
+            color: #ccc;
+            margin-left: 10px;
+        }
+        .nav {
+            background-color: #222;
+            overflow: hidden;
+            color: #fff;
+        }
+        .nav a {
+            padding: 14px 20px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #444;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .section-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .tool-box {
+            display: flex;
+            gap: 20px;
+        }
+        .tool {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            flex: 1;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .tool h3 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .tool p {
+            color: #666;
+            font-size: 14px;
+        }
+        .beta {
+            background-color: #ccc;
+            color: #333;
+            font-size: 12px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .tool a {
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .tool a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        My learning
+        <span>87hr 36min watched</span>
+        <a href="#" style="color: #ccc; font-size: 14px; margin-left: 10px;">View all activity</a>
+    </div>
+
+    <div class="nav">
+        <a href="#">All courses</a>
+        <a href="#">Learning paths</a>
+        <a href="#">Certifications</a>
+        <a href="#">Archived</a>
+        <a href="#">Learning tools</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Learning tools</h2>
+        <p class="section-desc">Explore a diverse range of courses and take advantage of these versatile tools to gain knowledge, skills, and confidence at your own pace.</p>
+        
+        <div class="tool-box">
+            <div class="tool">
+                <h3>Learning reminders</h3>
+                <p>Set time aside to learn and get reminders using your scheduler.</p>
+                <p>You currently have no ongoing reminders.</p>
+                <a href="#">See more</a>
+            </div>
+            <div class="tool">
+                <h3>Reflections <span class="beta">Beta</span></h3>
+                <p>Take time to reflect to strengthen your learning.</p>
+                <p>You have currently no recorded reflections on your learning journey.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
