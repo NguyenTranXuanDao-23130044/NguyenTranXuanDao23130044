@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coderbyte</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <meta name="description" content="Evaluate candidates quickly, affordably, and accurately for assessments, interviews, and take-home projects. Prepare for interviews on the #1 platform for 1M+ developers that want to level up their careers.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" /> 
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://coderbytestaticimages.s3.amazonaws.com/favicon_2.png" /> 
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS to style the page like the image -->
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #4a4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .top-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            line-height: 1.3;
+            font-weight: 700;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 span {
+            color: #2ED1A5;
+        }
+
+        .smallTag span {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #b2b2b2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .trial-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .mainEmail {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .mainTopButton {
+            background-color: #2ED1A5;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .mainTopButton:hover {
+            background-color: #26b291;
+        }
+
+        .learnMoreLink a {
+            color: #999;
+            font-size: 0.9em;
+            text-decoration: underline;
+        }
+
+        .learnMoreLink a:hover {
+            color: #666;
+        }
+
+        .leftSideImage, .rightSideImage {
+            position: absolute;
+            top: 10%;
+            width: 150px;
+            opacity: 0.4;
+        }
+
+        .leftSideImage {
+            left: 10%;
+        }
+
+        .rightSideImage {
+            right: 10%;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #12232E;
+            color: #ffffff;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        header .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        header a:hover {
+            color: #2ED1A5;
+        }
+
+        
+    </style>
+</head>
+  
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="https://coderbytestaticimages.s3.amazonaws.com/favicon_2.png" alt="Coderbyte Logo">
+            Coderbyte
+        </a>
+        <nav>
+            <a href="#">Developers</a>
+            <a href="#">Organizations</a>
+            <a href="#">Dashboard</a>
+        </nav>
+    </header>
+
+    <div id="app">
+        <div class="top-section">
+            <p class="smallTag">
+                <span>FOR ORGANIZATIONS</span>
+            </p>
+            <h1>
+                <span>Evaluate Candidates</span> Quickly,<br>Affordably, and Accurately
+            </h1>
+            <p>
+                The #1 platform for technical assessments, interviews, and projects.<br>Get unlimited candidates and admins on every plan.
+            </p>
+            <div class="trial-form">
+                <input type="email" class="mainEmail" placeholder="Work email address" />
+                <button class="mainTopButton">Start Trial</button>
+            </div>
+            <p class="learnMoreLink">
+                <a href="/organizations">Learn more</a>
+            </p>
+        </div>
+        <!-- background images faded languages -->
+        <img src="https://coderbytestaticimages.s3.amazonaws.com/orgs-v5/desktop/left-side.png" class="leftSideImage" />
+        <img src="https://coderbytestaticimages.s3.amazonaws.com/orgs-v5/desktop/right-side%402x.png" class="rightSideImage" />
+    </div>
+</body>
+</html>
