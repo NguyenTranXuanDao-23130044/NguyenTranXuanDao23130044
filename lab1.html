@@ -1,55 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab1 Menu</title>
+    <title>Lab 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
             padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        nav a:hover {
-            background-color: #ddd;
+
+        textarea {
+            resize: vertical;
         }
-        section {
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        table th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        .readonly {
+            background-color: #e9ecef;
         }
     </style>
 </head>
 <body>
-    <h1>Menu</h1>
+    <div class="container">
+        <h1>Quản Lý Khóa Học</h1>
 
-    <nav>
-        <a href="#requirement">Requirement</a>
-        <a href="#design">Design</a>
-        <a href="implement.html">Implement</a>
-    </nav>
+        <!-- Form thêm hoặc chỉnh sửa khóa học -->
+        <div class="form-group">
+            <label for="course-name">Tên Khóa Học</label>
+            <input type="text" id="course-name" placeholder="Nhập tên khóa học" required>
+        </div>
 
-    <section id="requirement">
-        <h2>Requirement</h2>
-        <p>
-            Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
-lớp môn học, giảng viên,... Sau đó thiết kế chức năng Quản lý đối
-tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm
-kiếm cho đối tượng đó. Ví dụ, làm chức năng Quản lý Sinh viên,
-bao gôm tính năng thêm, sửa, xóa, tìm kiếm. Chú ý: Các thành
-viên trong nhóm không được chọn các đối tượng giống nhau.
-        </p>
-    </section>
+        <div class="form-group">
+            <label for="course-description">Mô Tả Khóa Học</label>
+            <textarea id="course-description" placeholder="Nhập mô tả khóa học"></textarea>
+        </div>
 
-    <section id="design">
-        <h2>Design</h2>
-        <p><a href="path_to_image_of_design_on_paper.jpg">Thiết kế trên giấy (Chụp lại ảnh)</a></p>
-        <p><a href="path_to_html_screenshot.jpg">Chụp lại màn hình đã thiết kế trên HTML</a></p>
-    </section>
+        <div class="form-group">
+            <label for="created-by">Người Tạo</label>
+            <input type="text" id="created-by" placeholder="Nhập tên người tạo">
+        </div>
 
+        <div class="form-group">
+            <label for="course-id">Mã Khóa Học</label>
+            <input type="text" id="course-id" class="readonly" readonly value="Tự động tạo">
+        </div>
+
+        <div class="form-group">
+            <label for="created-at">Ngày Tạo</label>
+            <input type="text" id="created-at" class="readonly" readonly value="Tự động tạo">
+        </div>
+
+        <div class="form-group">
+            <label for="updated-at">Ngày Cập Nhật</label>
+            <input type="text" id="updated-at" class="readonly" readonly value="Tự động cập nhật">
+        </div>
+
+        <button id="add-course">Thêm/Chỉnh Sửa Khóa Học</button>
+
+        <!-- Danh sách khóa học -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Khóa Học</th>
+                    <th>Mô Tả</th>
+                    <th>Người Tạo</th>
+                    <th>Ngày Tạo</th>
+                    <th>Ngày Cập Nhật</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="course-list">
+                <!-- Khóa học mẫu -->
+                <tr>
+                    <td>Toán Cao Cấp</td>
+                    <td>Khóa học về toán học nâng cao.</td>
+                    <td>Xuân Đào</td>
+                    <td>2025-01-01</td>
+                    <td>2025-01-15</td>
+                    <td><button class="delete-btn" onclick="deleteRow(this)">Xóa</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function deleteRow(button) {
+            if (confirm("Bạn có chắc chắn muốn xóa khóa học này?")) {
+                const row = button.parentElement.parentElement;
+                row.remove();
+            }
+        }
+
+        document.getElementById('add-course').addEventListener('click', () => {
+            const courseName = document.getElementById('course-name').value;
+            const courseDescription = document.getElementById('course-description').value;
+            const createdBy = document.getElementById('created-by').value;
+
+            if (!courseName) {
+                alert("Tên khóa học là bắt buộc.");
+                return;
+            }
+
+            const newRow = `
+                <tr>
+                    <td>${courseName}</td>
+                    <td>${courseDescription}</td>
+                    <td>${createdBy}</td>
+                    <td>Tự động tạo</td>
+                    <td>Tự động cập nhật</td>
+                    <td><button class="delete-btn" onclick="deleteRow(this)">Xóa</button></td>
+                </tr>
+            `;
+
+            document.getElementById('course-list').insertAdjacentHTML('beforeend', newRow);
+
+            // Xóa dữ liệu trong form sau khi thêm
+            document.getElementById('course-name').value = '';
+            document.getElementById('course-description').value = '';
+            document.getElementById('created-by').value = '';
+        });
+    </script>
 </body>
 </html>
-
