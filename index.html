@@ -5,67 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Home</title>
     <style>
-         body {
-        font-family: "Times New Roman", Times, serif, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url(https://anhdephd.vn/wp-content/uploads/2022/03/download-hinh-nen-may-tinh-dep-full-hd-data:image/jpeg;base64,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.jpg);
-        background-size: 100%;
-      }
+        body {
+            font-family: "Times New Roman", Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-      header {
-        background-color: #333;
-        color: white;
-        padding: 15px 0;
-        text-align: center;
-      }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      nav {
-        background-color: #444;
-        padding: 10px;
-        text-align: center;
-      }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
 
-      nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-size: 18px;
-      }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-      nav a:hover {
-        color: #ffcc00;
-      }
+        nav ul li {
+            position: relative;
+            margin: 0 10px;
+        }
 
-      footer {
-        background-color: #333;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-      }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            background-color: #555;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            background-color: #555;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #666;
+        }
+
+        nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        nav ul li ul li:hover > ul {
+            display: block;
+        }
+
+        .welcome {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .welcome-text {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-links {
+            margin-left: 10px;
+        }
+
+        .footer-links a {
+            color: #00aced;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-      </header>
-  
-      <nav>
-       <a href="CV.html">About</a>
-        <a href="lab1.html">Lab1</a>
-        <a href="lab2.html">Lab2</a>
-        <a href="lab3.html">Lab3</a>
-        <a href="lab4.html">Lab4</a>
-        <a href="lab5.html">Lab5</a>
-        <a href="lab6.html">lab6</a>
-        <a href="result.html">Result</a>
-      </nav>
-  
-      <footer>
-        <p>© 2024 My Website| @FaceBook.</p>
-      </footer>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CV.html">About</a></li>
+            <li>
+                <a href="#">Labs</a>
+                <ul>
+                    <li><a href="lab1.html">Lab 1</a></li>
+                    <li><a href="lab2.html">Lab 2</a></li>
+                    <li><a href="lab3.html">Lab 3</a></li>
+                    <li>
+                        <a href="#">Lab 4</a>
+                        <ul>
+                            <li><a href="req1.html">req 1</a></li>
+                            <li><a href="req2.html">req 2</a></li>
+                            <li><a href="req3_4.html">req 3_4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="lab5.html">Lab 5</a></li>
+                    <li>
+                        <a href="#">Lab 6</a>
+                        <ul>
+                            <li><a href="webdeverlopment.html">req 5_6</a></li>
+                            <li><a href="learningfocus.html">req 7</a></li>
+                            <li><a href="fororganizations.html">req 8</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="result.html">Result</a></li>
+        </ul>
+    </nav>
+ </header>
+
+ <div class="welcome">Welcome to my website</div>
+ <div class="welcome-text">My name is Xuan Dao. This is my web first, as well as my thesis for Human-Robot Communication.</div>
+
+    <footer>
+        <p>© 2024 My Website | <span class="footer-links"><a href="https://facebook.com" target="_blank">Facebook</a></span></p>
+    </footer>
 </body>
 </html>
