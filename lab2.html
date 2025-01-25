@@ -1,143 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<.home>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2</title>
+    <title> Exercise Dashboard </title>
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    width: 100%;
-    max-width: 900px;
-}
-
-.login-container {
-    display: flex;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.login-left, .login-right {
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-}
-
-.login-left {
-    background: #fff;
-}
-
-.login-right {
-    background: linear-gradient(135deg, #f54ea2, #ff7676);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-}
-
-.remember-me {
-    display: flex;
-    align-items: center;
-}
-
-.remember-me input {
-    margin-right: 5px;
-}
-
-.btn {
-    background: linear-gradient(135deg, #f54ea2, #ff7676);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-}
-
-.social-icons {
-    margin-bottom: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-}
-
-.forgot-password {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #f54ea2;
-    text-align: right;
-    text-decoration: none;
-}
-
-.toggle-button {
-    background: white;
-    color: #ff7676;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.form-signup {
-    display: none;
-}
-
-.home{
+    
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        select, input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .exercise-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .exercise-container h3 {
+            margin-top: 0;
+        }
+        .status {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .completed {
+            color: green;
+        }
+        .in-progress {
+            color: orange;
+        }
+        .not-started {
+            color: red;
+        }
+        .exercise-header {
+            margin-bottom: 20px;
+        }
+        .code-editor, .metrics {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hint-btn {
+            background-color: #FFC107;
+        }
+        .feedback, .ranking {
+            margin-top: 20px;
+        }
+        .feedback textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+        .home{
     padding: 10px;
     position: absolute;
     top: 10px;
@@ -147,91 +103,145 @@ h2 {
     cursor: pointer;
 
   }
-  
-    </style>
-    
-</head>
-<script>
+</style>
+ <script>
     function gotoHome(){
     window.location.href="index.html";}
   </script>
+</head>
 <body>
     <button class="home" onclick="gotoHome()">Home</button>
-    <div class="container">
-        <div class="login-container">
-            <div class="login-left">
-                <!-- Login Form -->
-                <form id="form-login" class="form-login" action="login.html" method="post">
-                    <h2>Sign In</h2>
-                    <div class="social-icons">
-                        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                    </div>
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Username" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Password" required>
-                    </div>
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember Me</label>
-                    </div>
-                    <button type="submit" class="btn">Sign In</button>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
-                </form>
+    
+    <h2>Exercise Dashboard</h2>
 
-                <!-- Sign Up Form -->
-                <form id="form-signup" class="form-signup" action="signup.html" method="post">
-                    <h2>Create an Account</h2>
-                    <div class="input-group">
-                        <label for="new-username">Username</label>
-                        <input type="text" id="new-username" placeholder="Username" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="new-password">Password</label>
-                        <input type="password" id="new-password" placeholder="Password" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-                    </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                </form>
-            </div>
-            <div class="login-right">
-                <h2>Welcome</h2>
-                <p id="toggle-text">Don't have an account?</p>
-                <button class="toggle-button" onclick="toggleForms()">Sign Up</button>
-            </div>
+    <!-- Filter and Search -->
+    <div class="filter-container">
+        <label for="language">Filter by Language:</label>
+        <select id="language" onchange="filterExercises()">
+            <option value="all">All</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+        </select>
+
+        <label for="search">Search by keyword:</label>
+        <input type="text" id="search" placeholder="Search exercises..." onkeyup="filterExercises()">
+    </div>
+
+    <!-- Exercise List -->
+    <div id="exercise-list">
+        <div class="exercise-container" data-language="C" data-status="completed">
+            <h3>Exercise 1: C Basics</h3>
+            <p><strong>Description:</strong> Write a program to print "Hello, World!" in C.</p>
+            <p><strong>Difficulty:</strong> Easy</p>
+            <p class="status completed">Completed</p>
+        </div>
+
+        <div class="exercise-container" data-language="Python" data-status="in-progress">
+            <h3>Exercise 2: Python Functions</h3>
+            <p><strong>Description:</strong> Write a Python function that returns the square of a number.</p>
+            <p><strong>Difficulty:</strong> Medium</p>
+            <p class="status in-progress">In Progress</p>
+        </div>
+
+        <div class="exercise-container" data-language="Java" data-status="not-started">
+            <h3>Exercise 3: Java Classes</h3>
+            <p><strong>Description:</strong> Implement a Java class with constructors and methods.</p>
+            <p><strong>Difficulty:</strong> Hard</p>
+            <p class="status not-started">Not Started</p>
         </div>
     </div>
 
     <script>
-        function toggleForms() {
-            var loginForm = document.getElementById("form-login");
-            var signupForm = document.getElementById("form-signup");
-            var toggleText = document.getElementById("toggle-text");
-            var toggleButton = document.querySelector(".toggle-button");
+        function filterExercises() {
+            // Get the filter values
+            const languageFilter = document.getElementById('language').value.toLowerCase();
+            const searchKeyword = document.getElementById('search').value.toLowerCase();
 
-            if (loginForm.style.display === "none") {
-                loginForm.style.display = "block";
-                signupForm.style.display = "none";
-                toggleText.innerText = "Don't have an account?";
-                toggleButton.innerText = "Sign Up";
-            } else {
-                loginForm.style.display = "none";
-                signupForm.style.display = "block";
-                toggleText.innerText = "Already have an account?";
-                toggleButton.innerText = "Sign In";
-            }
+            // Get the list of exercises
+            const exercises = document.querySelectorAll('.exercise-container');
+
+            exercises.forEach(exercise => {
+                const language = exercise.getAttribute('data-language').toLowerCase();
+                const status = exercise.getAttribute('data-status');
+                const title = exercise.querySelector('h3').innerText.toLowerCase();
+
+                // Check if exercise matches the filter criteria
+                const matchesLanguage = (languageFilter === 'all' || language === languageFilter);
+                const matchesSearch = (title.includes(searchKeyword));
+
+                // Show or hide the exercise based on filters
+                if (matchesLanguage && matchesSearch) {
+                    exercise.style.display = '';
+                } else {
+                    exercise.style.display = 'none';
+                }
+            });
         }
     </script>
+
+<div class="exercise-header">
+    <h2>Exercise: Implement a Function in Python</h2>
+    <p><strong>Description:</strong> Write a Python function that calculates the factorial of a number.</p>
+    <p><strong>Instructions:</strong> Your code should handle edge cases where the input is 0 or 1.</p>
+</div>
+
+<!-- Code Editor -->
+<div class="code-editor">
+    <textarea id="code-editor" rows="10" style="width: 100%;"></textarea>
+</div>
+
+<!-- Performance Metrics -->
+<div class="metrics">
+    <div><strong>Time Taken:</strong> <span id="time-taken">--</span> seconds</div>
+    <div><strong>Memory Used:</strong> <span id="memory-used">--</span> MB</div>
+    <div><strong>Test Cases Passed:</strong> <span id="test-passed">0</span> / <span id="total-test-cases">3</span></div>
+</div>
+
+<!-- Buttons for code control -->
+<button onclick="runCode()">Run Code</button>
+<button onclick="clearCode()">Clear Code</button>
+<button onclick="submitCode()">Submit</button>
+<button onclick="tryAgain()">Try Again</button>
+<button onclick="returnDashboard()">Return to Dashboard</button>
+<button class="hint-btn" onclick="showHint()">Hint (3 left)</button>
+
+<!-- Feedback Section -->
+<div class="feedback">
+    <h3>Leave Feedback or Ask for Help</h3>
+    <textarea placeholder="Your feedback or question..."></textarea>
+    <button>Submit Feedback</button>
+</div>
+
+<script>
+    // Simulate code execution (this is a basic example, you'll need a server-side sandbox for real execution)
+    function runCode() {
+        document.getElementById("time-taken").innerText = (Math.random() * 2).toFixed(2);
+        document.getElementById("memory-used").innerText = (Math.random() * 10).toFixed(2);
+        document.getElementById("test-passed").innerText = Math.floor(Math.random() * 4);
+    }
+
+    function clearCode() {
+        document.getElementById("code-editor").value = "";
+    }
+
+    function submitCode() {
+        alert("Code Submitted for Grading!");
+    }
+
+    function tryAgain() {
+        clearCode();
+        alert("You can try again!");
+    }
+
+    function returnDashboard() {
+        window.location.href = 'dashboard.html'; // Navigate back to dashboard
+    }
+
+    function showHint() {
+        alert("Hint: Remember to consider edge cases.");
+    }
+</script>
+
 </body>
 </html>
