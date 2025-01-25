@@ -6,7 +6,7 @@
     <title>Learning Management Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -181,9 +181,24 @@
             color: #0073e6;
             text-decoration: none;
         }
+        .home{
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+
+      }
     </style>
+     <script>
+        function gotoHome(){
+        window.location.href="index.html";}
+      </script>
 </head>
 <body>
+        <button class="home" onclick="gotoHome()">Home</button>
 
     <!-- Navbar -->
     <div class="navbar">

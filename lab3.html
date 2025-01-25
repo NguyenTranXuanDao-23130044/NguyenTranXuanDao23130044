@@ -1,165 +1,240 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chia Sẻ Tài Liệu Học Tập</title>
+    <title>Lab 3</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
+        .navbar {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
             text-align: center;
-            color: #333;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
+            font-size: 1.5rem;
             font-weight: bold;
         }
 
-        input[type="text"], select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
         }
 
-        button {
+        .card {
+            background-color: #ffffff;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin: 10px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .card-content a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .card-content a:hover {
+            color: #0056b3;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #ffffff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #007bff;
+            transition: color 0.2s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #0056b3;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .content p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 15px;
             background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
         }
 
-        button:hover {
+        .back-button:hover {
             background-color: #0056b3;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .hidden {
+            display: none;
         }
+        
+        .home{
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        border-radius: 5px;
+        cursor: pointer;
 
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ccc;
-        }
-
-        table th {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .link {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
+      }
     </style>
+    <script>
+        function gotoHome(){
+        window.location.href="index.html";}
+      </script>
+    <script>
+        function showLessonContent(lessonId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            // Show the selected lesson content
+            document.getElementById(lessonId).classList.remove('hidden');
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Chia Sẻ Tài Liệu Học Tập</h1>
+    <button class="home" onclick="gotoHome()">Home</button>
 
-        <!-- Form thêm tài liệu -->
-        <div class="form-group">
-            <label for="subject">Môn Học</label>
-            <input type="text" id="subject" placeholder="Nhập tên môn học" required>
+    <div class="navbar">Available Materials</div>
+
+    <!-- Material List -->
+    <div class="container" id="materials">
+        <div class="card" onclick="showLessonContent('lesson1')">
+            <div class="card-content">
+                <h3>Vật lý</h3>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label for="document-type">Loại Tài Liệu</label>
-            <select id="document-type">
-                <option value="Bài giảng">Bài giảng</option>
-                <option value="Bài tập">Bài tập</option>
-                <option value="Tài liệu tham khảo">Tài liệu tham khảo</option>
-            </select>
+        <div class="card" onclick="showLessonContent('lesson2')">
+            <div class="card-content">
+                <h3>Hóa học</h3>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label for="document-link">Liên Kết Tài Liệu</label>
-            <input type="text" id="document-link" placeholder="Nhập URL của tài liệu" required>
+        <div class="card" onclick="showLessonContent('lesson3')">
+            <div class="card-content">
+                <h3>Toán cao cấp</h3>
+            </div>
         </div>
-
-        <button id="add-document">Thêm Tài Liệu</button>
-
-        <!-- Danh sách tài liệu -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Môn Học</th>
-                    <th>Loại Tài Liệu</th>
-                    <th>Liên Kết</th>
-                </tr>
-            </thead>
-            <tbody id="document-list">
-                <!-- Tài liệu mẫu -->
-                <tr>
-                    <td>Toán Cao Cấp</td>
-                    <td>Bài giảng</td>
-                    <td><a href="https://www.mathvn.com/" class="link" target="_blank">Xem Tài Liệu</a></td>
-                </tr>
-                <tr>
-                    <td>Lập Trình Python</td>
-                    <td>Tài liệu tham khảo</td>
-                    <td><a href="https://docs.python.org/3/" class="link" target="_blank">Xem Tài Liệu</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card" onclick="showLessonContent('lesson4')">
+            <div class="card-content">
+                <h3>Văn học</h3>
+            </div>
+        </div>
+        <div class="card" onclick="showLessonContent('lesson5')">
+            <div class="card-content">
+                <h3>Sinh học</h3>
+            </div>
+        </div>
+        <div class="card" onclick="showLessonContent('lesson6')">
+            <div class="card-content">
+                <h3>Lịch sử</h3>
+            </div>
+        </div>
     </div>
 
-    <script>
-        document.getElementById('add-document').addEventListener('click', () => {
-            const subject = document.getElementById('subject').value;
-            const documentType = document.getElementById('document-type').value;
-            const documentLink = document.getElementById('document-link').value;
+    <!-- Lesson Content -->
+    <div id="lesson1" class="content hidden">
+        <h1>1. Vật lý</h1>
+        <p><strong>Giới thiệu:</strong> Vật lý là ngành khoa học tự nhiên nghiên cứu về các hiện tượng tự nhiên và quy luật của chúng...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thptnguyentatthanh/2021_9/ly-12-co-ban_79202192648.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
 
-            if (!subject || !documentLink) {
-                alert("Vui lòng điền đầy đủ thông tin.");
-                return;
-            }
+    <div id="lesson2" class="content hidden">
+        <h1>2. Hóa học</h1>
+        <p><strong>Giới thiệu:</strong> Hóa học nghiên cứu tính chất, cấu trúc và các phản ứng của chất...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thptnguyentatthanh/2021_9/hh12_189202116149.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
 
-            const newRow = `
-                <tr>
-                    <td>${subject}</td>
-                    <td>${documentType}</td>
-                    <td><a href="${documentLink}" class="link" target="_blank">Xem Tài Liệu</a></td>
-                </tr>
-            `;
+    <div id="lesson3" class="content hidden">
+        <h1>3. Toán học</h1>
+        <p><strong>Giới thiệu:</strong> Toán cao cấp bao gồm các khái niệm về tích phân, vi phân và đại số tuyến tính...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thpthothibi/2021_9/sgk-giai-tich-12_1692021193424.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
 
-            document.getElementById('document-list').insertAdjacentHTML('beforeend', newRow);
+    <div id="lesson4" class="content hidden">
+        <h1>4. Văn học</h1>
+        <p><strong>Giới thiệu:</strong> Văn học nghiên cứu các tác phẩm viết và ý nghĩa của chúng trong lịch sử...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thpthothibi/2021_9/sgk-ngu-van-12-tap-2_169202120920.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
 
-            // Xóa dữ liệu trong form sau khi thêm
-            document.getElementById('subject').value = '';
-            document.getElementById('document-type').value = 'Bài giảng';
-            document.getElementById('document-link').value = '';
-        });
-    </script>
+    <div id="lesson5" class="content hidden">
+        <h1>5. Sinh học</h1>
+        <p><strong>Giới thiệu:</strong> Sinh học là môn khoa học về sự sống và các hệ thống sinh vật...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thpthothibi/2021_9/sgk-sinh-hoc-lop-12_169202120548.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
+
+    <div id="lesson6" class="content hidden">
+        <h1>6. Lịch sử</h1>
+        <p><strong>Giới thiệu:</strong> Lịch sử ghi lại các sự kiện và câu chuyện quan trọng của con người...</p>
+        <a href="https://84864c160d.vws.vegacdn.vn//Data/hcmedu/thpthothibi/2021_9/sgk-lich-su-12_1692021194220.pdf" class="back-button" onclick="location.reload()">View Materials</a>
+    </div>
 </body>
 </html>

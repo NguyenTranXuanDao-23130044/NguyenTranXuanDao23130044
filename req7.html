@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Focused on Your Goals</title>
+   <style>
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+.learning-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.goal-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.goal-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.goal-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.goal-box p {
+    margin: 0;
+    color: #555;
+}
+
+.goal-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chỉ thêm hiệu ứng hover cho mục đầu tiên */
+.goal-box:first-child:hover {
+    background-color: #e0f7fa; /* Màu nền nhạt khi hover */
+    border-color: #26a69a; /* Đổi màu viền khi hover */
+}
+
+.enterprise {
+    position: relative;
+}
+
+.badge {
+    background-color: #8b5cf6;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.home{
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+
+      }
+    </style>
+     <script>
+        function gotoHome(){
+        window.location.href="index.html";}
+      </script>
+</head>
+<body>
+        <button class="home" onclick="gotoHome()">Home</button>
+    <section class="learning-section">
+        <h1>Learning focused on your goals</h1>
+        <div class="goal-boxes">
+            <div class="goal-box">
+                <h3>Hands-on training</h3>
+                <p>Upskill effectively with AI-powered coding exercises, practice tests, and quizzes.</p>
+            </div>
+            <div class="goal-box">
+                <h3>Certification prep</h3>
+                <p>Prep for industry-recognized certifications by solving real-world challenges and earn badges along the way.</p>
+            </div>
+            <div class="goal-box enterprise">
+                <h3>Insights and analytics <span class="badge">Enterprise Plan</span></h3>
+                <p>Fast-track goals with advanced insights plus a dedicated customer success team to help drive effective learning.</p>
+                <a href="#">Find out more →</a>
+            </div>
+            <div class="goal-box enterprise">
+                <h3>Customizable content <span class="badge">Enterprise Plan</span></h3>
+                <p>Create tailored learning paths for team and organization goals and even host your own content and resources.</p>
+                <a href="#">Find out more →</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

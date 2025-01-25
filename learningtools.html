@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Learning</title>
+    <title> Learning tools </title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+          body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
         }
+        /* Header */
         .header {
-            background-color: #333;
+            background-color: #242525;
             color: #fff;
             padding: 20px;
-            text-align: left;
             font-size: 24px;
         }
-        .header span {
-            font-size: 14px;
-            color: #ccc;
-            margin-left: 10px;
-        }
-        .nav {
-            background-color: #222;
-            overflow: hidden;
-            color: #fff;
-        }
-        .nav a {
-            padding: 14px 20px;
-            display: inline-block;
-            color: #fff;
-            text-decoration: none;
-        }
-        .nav a:hover {
-            background-color: #444;
-        }
+      
+        nav {
+        background-color: #444;
+        padding: 10px;
+        text-align: left;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ffcc00;
+      }
+      .home{
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+
+      }
         .container {
             padding: 20px;
         }
@@ -87,23 +97,28 @@
             text-decoration: underline;
         }
     </style>
+     <script>
+        function gotoHome(){
+        window.location.href="index.html";}
+      </script>
 </head>
 <body>
-
-    <div class="header">
-        My learning
-        <span>87hr 36min watched</span>
-        <a href="#" style="color: #ccc; font-size: 14px; margin-left: 10px;">View all activity</a>
+    <button class="home" onclick="gotoHome()">Home</button>
+<!-- Header -->
+<div class="header">
+    <h1>My learning</h1>
+    <div class="header-info">
+        <span>87hr 36min</span> watched ℹ️
+        <a href="#">View all activity</a>
     </div>
-
-    <div class="nav">
-        <a href="#">All courses</a>
-        <a href="#">Learning paths</a>
-        <a href="#">Certifications</a>
-        <a href="#">Archived</a>
-        <a href="#">Learning tools</a>
-    </div>
-
+</div>   
+<nav> 
+    <a href="#">All courses</a>
+    <a href="#">Learning paths</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="archived.html">Archived</a>
+    <a href="learningtools.html">Learning tools</a>
+  </nav>
     <div class="container">
         <h2 class="section-title">Learning tools</h2>
         <p class="section-desc">Explore a diverse range of courses and take advantage of these versatile tools to gain knowledge, skills, and confidence at your own pace.</p>
@@ -125,3 +140,4 @@
 
 </body>
 </html>
+

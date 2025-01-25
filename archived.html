@@ -3,22 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Learning Page</title>
-  <link rel="stylesheet" href="stylearchived.css">
+  <title> Archived </title>
+  <style>
+    body {
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        background-color: #f3f4f6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    /* Header */
+    .header {
+        background-color: #242525;
+        color: #fff;
+        padding: 20px;
+        font-size: 24px;
+    }
+    nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: left;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #ffcc00;
+  }
+    /* Content */
+    .content {
+        padding: 20px;
+    }
+    .section {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .section h3 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+    .badge-info {
+        font-size: 14px;
+        color: #6b7280;
+    }
+    .badge-info strong {
+        color: #111827;
+    }
+    .badge-button {
+        background-color: #6b21d1;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+    }
+    .cert-prep {
+        font-size: 14px;
+        color: #6b7280;
+    }
+    .cert-button {
+        background-color: #fff;
+        border: 1px solid #6b7280;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+    }
+    /* Certification Cards */
+    .certifications {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .cert-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        text-align: center;
+        width: 180px;
+        padding: 10px;
+        background-color: #f9fafb;
+    }
+    .cert-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .cert-card p {
+        font-size: 14px;
+        color: #111827;
+        margin: 10px 0 5px;
+    }
+    .cert-card small {
+        color: #6b7280;
+    }
+
+    main {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+  }
+
+    .home{
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  .course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+  }
+  
+  .course-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .course-details {
+    padding: 15px;
+  }
+  
+  .course-details h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .course-details p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+  }
+  
+  .progress span {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: left;
+  }
+  
+  .rating span {
+    font-size: 18px;
+    color: gold;
+  }
+  
+  .rating p {
+    font-size: 12px;
+    color: #777;
+    margin-left: 5px;
+  }
+  
+</style>
+ <script>
+    function gotoHome(){
+    window.location.href="index.html";}
+  </script>
 </head>
 <body>
-  <header>
-    <h1>My learning</h1>
-    <p><strong>87hr 36min</strong> watched <span> | </span> <a href="#">View all activity</a></p>
-  </header>
-  <nav>
-    <a href="#">All courses</a>
-    <a href="#">Learning paths</a>
-    <a href="#">Certifications</a>
-    <a href="#" class="active">Archived</a>
-    <a href="#">Learning tools</a>
-  </nav>
-  <main>
+
+  <button class="home" onclick="gotoHome()">Home</button>
+
+  <!-- Header -->
+  <div class="header">
+      <h1>My learning</h1>
+      <div class="header-info">
+          <span>87hr 36min</span> watched ℹ️
+          <a href="#">View all activity</a>
+      </div>
+  </div>   
+  <nav> 
+      <a href="#">All courses</a>
+      <a href="#">Learning paths</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="archived.html">Archived</a>
+      <a href="learningtools.html">Learning tools</a>
+    </nav>
+  
+    <main>
     <section class="course-card">
       <img src="course-image.png" alt="CSR Course Image">
       <div class="course-details">

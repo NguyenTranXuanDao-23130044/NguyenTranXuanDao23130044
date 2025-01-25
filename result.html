@@ -6,18 +6,11 @@
     <title> Result </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Reset styles */
-        * {
+        * body {
+            font-family: "Times New Roman", Times, serif, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            padding: 20px;
-            color: #333;
+            background-color: #f4f4f4;
         }
 
         .report-container {
@@ -118,40 +111,203 @@
             font-weight: bold;
         }
 
-        .footer {
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
             text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            background-color: #555;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            background-color: #555;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #666;
+        }
+
+        nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        nav ul li ul li:hover > ul {
+            display: block;
+        }
+
     </style>
+
 </head>
 <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="CV.html">About</a></li>
+                    <li>
+                        <a href="#">Labs</a>
+                        <ul>
+                            <li><a href="lab1.html">Lab 1</a></li>
+                            <li><a href="lab2.html">Lab 2</a></li>
+                            <li><a href="lab3.html">Lab 3</a></li>
+                            <li>
+                                <a href="#">Lab 4</a>
+                                <ul>
+                                    <li><a href="req1.html">req 1</a></li>
+                                    <li><a href="req2.html">req 2</a></li>
+                                    <li><a href="req3_4.html">req 3_4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="lab5.html">Lab 5</a></li>
+                            <li>
+                                <a href="#">Lab 6</a>
+                                <ul>
+                                    <li><a href="req5_6.html">req 5_6</a></li>
+                                    <li><a href="req7.html">req 7</a></li>
+                                    <li><a href="req8.html">req 8</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="result.html">Result</a></li>
+                </ul>
+            </nav>
+         </header>
     <div class="report-container">
         <div class="header">
-            <h2>Work Progress Report</h2>
-            <a href="#" class="add-task"><i class="fas fa-plus"></i> Add Task</a>
+            <h2> Web Project </h2>
+            <a href="https://nguyenhuuhuy12.github.io/GTNM-Project/index.html" class="add-task"> View web </a>
         </div>
         <table>
             <thead>
                 <tr>
                     <th>Task</th>
                     <th>Status</th>
-                    <th>Priority</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Design Blog Home</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><span class="percentage">15%</span></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report-container">
+        <div class="header">
+            <h2> Web Group </h2>
+            <a href="https://nguyenhuuhuy12.github.io/Nhom3-HCI/login.html" class="add-task"> View web </a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Percentage</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Design Login & Signup</td>
                     <td><span class="status completed">Completed</span></td>
-                    <td><span class="priority medium">Medium</span></td>
+                    <td><span class="percentage">20%</span></td>
                 </tr>
                 
             </tbody>
         </table>
-        <div class="footer">
-            © 2025 Work Progress Report. All rights reserved.
-        </div>
     </div>
+
+<div class="report-container">
+        <div class="header">
+            <h2> Những thuận lợi và khó khăn </h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th> Thuận lợi </th>
+                    <th> Khó khăn </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="Thuận lợi"> 
+                        <p>- Được tiếp xúc với cách làm việc nhóm.</p>
+                        <p>- Được tìm hiểu, khai thác sâu về lập trình. </p>
+                        <p>- Được làm quen với html, css, javascript.</p>
+                        <p>- Biết thêm được các công cụ hỗ trợ cũng như các trang web hướng dẫn các thuật ngữ, chức năng trong html.</p>
+                    </span></td>
+                    <td><span class="Khó khăn">
+                        <p>- Còn chậm trong việc tiếp thu kiến thức, hỗ trợ làm bài tập nhóm.</p>
+                        <p>- Chưa nắm bắt được tâm lý người sử dụng sản phẩm.</p>
+                        <p>- Lập thời gian biểu chưa hiệu quả.</p>
+                        <p>- Việc giao tiếp với nhóm còn rụt rè.</p>
+                     </span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
